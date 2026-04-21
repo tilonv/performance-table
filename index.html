@@ -12,11 +12,37 @@
       padding: 20px;
       background: #ffffff;
     }
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .top-bar a {
+      text-decoration: none;
+      padding: 7px 14px;
+      font-size: 13px;
+      border-radius: 20px;
+      border: 1px solid #ccc;
+      background: #f5f5f5;
+      color: #333;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .top-bar a:hover { background: #e8e8e8; }
+    .btn-playlist {
+      background: #ff0000 !important;
+      color: #fff !important;
+      border-color: #cc0000 !important;
+    }
+    .btn-playlist:hover { background: #cc0000 !important; }
     h1 {
       text-align: center;
       font-size: 24px;
       font-weight: bold;
-      margin-bottom: 20px;
+      margin-bottom: 16px;
       color: #222;
     }
     .toolbar {
@@ -76,6 +102,9 @@
     /* Dark mode */
     body.dark { background: #1e1e1e; }
     body.dark h1 { color: #eee; }
+    body.dark .top-bar a { background: #333; color: #eee; border-color: #555; }
+    body.dark .top-bar a:hover { background: #444; }
+    body.dark .btn-playlist { background: #cc0000 !important; color: #fff !important; border-color: #aa0000 !important; }
     body.dark button.toggle { background: #333; color: #eee; border-color: #555; }
     body.dark th { background: #2a2a2a; color: #aaa; border-bottom: 1px solid #444; }
     body.dark td { color: #ddd; border-bottom: 1px solid #333; }
@@ -86,10 +115,18 @@
   </style>
 </head>
 <body>
+
+  <div class="top-bar">
+    <a href="https://sites.google.com/view/linedance4fun/dance-list">← Back</a>
+    <a class="btn-playlist" href="https://www.youtube.com/playlist?list=PL4Tkl2b7ZvnVuWz3F-vsSWgiX5UMGAIkQ" target="_blank">▶ View Full Playlist</a>
+  </div>
+
   <h1>Performance Schedule</h1>
+
   <div class="toolbar">
     <button class="toggle" onclick="toggleDark()">🌙 Dark mode</button>
   </div>
+
   <div class="tbl-wrap">
     <table>
       <thead>
@@ -110,9 +147,9 @@
         <tr><td>12</td><td>Happy Artist Group</td><td>Betty Ling</td><td><a class="song-link" href="https://youtu.be/ECf8SNUyWMY" target="_blank">▶ Click to listen</a></td></tr>
         <tr class="intermission"><td colspan="4">— Intermission —</td></tr>
         <tr><td>13</td><td>Independent Group: 80 Years of 100 Years</td><td>Joane Hua</td><td><a class="song-link" href="https://youtu.be/BR2OnPYaSKI" target="_blank">▶ Click to listen</a></td></tr>
-        <tr><td>14</td><td>Line Dance (Part 1)</td><td>Thomas Vuong</td><td><a class="song-link" href="https://youtu.be/H_WK5QwzGgQ" target="_blank">▶ Click to listen</a></td></tr>
-        <tr><td>15</td><td>Line Dance (Part 2)</td><td>Thomas Vuong</td><td><a class="song-link" href="https://youtu.be/j1ty3lJyBUE" target="_blank">▶ Click to listen</a></td></tr>
-        <tr><td>16</td><td>Line Dance (Part 3)</td><td>Thomas Vuong</td><td><a class="song-link" href="https://youtu.be/k8P-0DLI7X4" target="_blank">▶ Click to listen</a></td></tr>
+        <tr><td>14</td><td>LineDance4Fun (Part 1)</td><td>Thomas Vuong</td><td><a class="song-link" href="https://youtu.be/H_WK5QwzGgQ" target="_blank">▶ Click to listen</a></td></tr>
+        <tr><td>15</td><td>LineDance4Fun (Part 2)</td><td>Thomas Vuong</td><td><a class="song-link" href="https://youtu.be/j1ty3lJyBUE" target="_blank">▶ Click to listen</a></td></tr>
+        <tr><td>16</td><td>LineDance4Fun (Part 3)</td><td>Thomas Vuong</td><td><a class="song-link" href="https://youtu.be/k8P-0DLI7X4" target="_blank">▶ Click to listen</a></td></tr>
         <tr><td>17</td><td>Bamboo Flute</td><td>Wing Wu</td><td class="song-no">No music needed</td></tr>
         <tr><td>18</td><td>Chinese Folk Dance</td><td>Yijen Sung</td><td><a class="song-link" href="https://youtu.be/m3pU_pO4ZaU" target="_blank">▶ Click to listen</a></td></tr>
         <tr><td>19</td><td>Independent Group</td><td>Xiaolu Fu</td><td class="song-no">No music needed</td></tr>
